@@ -1,0 +1,77 @@
+{
+    "name": "Abaddon",
+    "innate": {
+        "function": "passive",
+        "description": {
+            "trigger": "on_attack_success",
+            "delivery": "",
+            "target": "enemy",
+            "duration_class": "short",
+            "damage_type": "",
+            "ability_interactions": ["breakable"],
+            "effects": ["antiheal"]
+        }
+    },
+    "kit": {
+        "attack": {
+            "function": "attack",
+            "description": {
+                "trigger": "",
+                "delivery": "melee",
+                "target": "",
+                "duration_class": "",
+                "damage_type": "",
+                "ability_interactions": [],
+                "effects": []
+            }
+        },
+        "ability_1": {
+            "function": "active",
+            "description": {
+                "trigger": "",
+                "delivery": "",
+                "target": "unit",
+                "duration_class": "instant",
+                "damage_type": "",
+                "ability_interactions": [],
+                "effects": []
+            }
+        },
+        "ability_2": {
+            "function": "",
+            "description": {
+                "trigger": "",
+                "delivery": "",
+                "target": "",
+                "duration_class": "",
+                "damage_type": "",
+                "ability_interactions": [],
+                "effects": []
+            }
+        },
+        "ability_3": {
+            "function": "",
+            "description": {
+                "trigger": "",
+                "delivery": "",
+                "target": "",
+                "duration_class": "",
+                "damage_type": "",
+                "ability_interactions": [],
+                "effects": []
+            }
+        },
+        "ultimate": {
+            "function": "",
+            "description": {
+                "trigger": "",
+                "delivery": "",
+                "target": "",
+                "duration_class": "",
+                "damage_type": "",
+                "ability_interactions": [],
+                "effects": []
+            }
+        }
+    }
+}

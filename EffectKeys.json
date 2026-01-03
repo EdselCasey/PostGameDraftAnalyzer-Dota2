@@ -1,0 +1,225 @@
+{
+  "slow": {
+    "type": "debuff",
+    "subtype": "",
+    "domain": "movement_speed",
+    "polarity": "reduce",
+    "damage_type": ""
+  },
+
+  "dot_magic": {
+    "type": "DoT",
+    "subtype": "",
+    "domain": "health",
+    "polarity": "reduce",
+    "damage_type": "magical"
+  },
+
+  "dot_physical": {
+    "type": "DoT",
+    "subtype": "",
+    "domain": "health",
+    "polarity": "reduce",
+    "damage_type": "physical"
+  },
+
+  "anti_heal": {
+    "type": "debuff",
+    "subtype": "",
+    "domain": "health_restoration",
+    "polarity": "reduce",
+    "damage_type": ""
+  },
+
+  "stun": {
+    "type": "debuff",
+    "subtype": "stun",
+    "domain": "control",
+    "polarity": "disable",
+    "damage_type": ""
+  },
+
+  "root": {
+    "type": "debuff",
+    "subtype": "root",
+    "domain": "control",
+    "polarity": "disable",
+    "damage_type": ""
+  },
+
+  "silence": {
+    "type": "debuff",
+    "subtype": "silence",
+    "domain": "control",
+    "polarity": "disable",
+    "damage_type": ""
+  },
+
+  "disarm": {
+    "type": "debuff",
+    "subtype": "disarm",
+    "domain": "control",
+    "polarity": "disable",
+    "damage_type": ""
+  },
+
+  "break": {
+    "type": "debuff",
+    "subtype": "break",
+    "domain": "passives",
+    "polarity": "disable",
+    "damage_type": ""
+  },
+
+  "dispel_soft": {
+    "type": "utility",
+    "subtype": "dispel",
+    "domain": "status",
+    "polarity": "remove",
+    "damage_type": ""
+  },
+
+  "dispel_hard": {
+    "type": "utility",
+    "subtype": "hard_dispel",
+    "domain": "status",
+    "polarity": "remove",
+    "damage_type": ""
+  },
+
+  "heal_instant": {
+    "type": "heal",
+    "subtype": "",
+    "domain": "health",
+    "polarity": "restore",
+    "damage_type": ""
+  },
+
+  "heal_over_time": {
+    "type": "heal",
+    "subtype": "hot",
+    "domain": "health",
+    "polarity": "restore",
+    "damage_type": ""
+  },
+
+  "lifesteal": {
+    "type": "heal",
+    "subtype": "lifesteal",
+    "domain": "health",
+    "polarity": "restore",
+    "damage_type": ""
+  },
+
+  "armor_up": {
+    "type": "buff",
+    "subtype": "",
+    "domain": "armor",
+    "polarity": "increase",
+    "damage_type": ""
+  },
+
+  "magic_resist_up": {
+    "type": "buff",
+    "subtype": "",
+    "domain": "magic_resistance",
+    "polarity": "increase",
+    "damage_type": ""
+  },
+
+  "damage_block": {
+    "type": "buff",
+    "subtype": "block",
+    "domain": "damage",
+    "polarity": "reduce",
+    "damage_type": ""
+  },
+
+  "attack_damage_up": {
+    "type": "buff",
+    "subtype": "",
+    "domain": "base_attack_damage",
+    "polarity": "increase",
+    "damage_type": ""
+  },
+
+  "attack_speed_up": {
+    "type": "buff",
+    "subtype": "",
+    "domain": "attack_speed",
+    "polarity": "increase",
+    "damage_type": ""
+  },
+
+  "move_speed_up": {
+    "type": "buff",
+    "subtype": "",
+    "domain": "movement_speed",
+    "polarity": "increase",
+    "damage_type": ""
+  },
+
+  "attack_damage_down": {
+    "type": "debuff",
+    "subtype": "",
+    "domain": "base_attack_damage",
+    "polarity": "reduce",
+    "damage_type": ""
+  },
+
+  "attack_speed_down": {
+    "type": "debuff",
+    "subtype": "",
+    "domain": "attack_speed",
+    "polarity": "reduce",
+    "damage_type": ""
+  },
+
+  "move_speed_down": {
+    "type": "debuff",
+    "subtype": "",
+    "domain": "movement_speed",
+    "polarity": "reduce",
+    "damage_type": ""
+  },
+
+  "miss_chance": {
+    "type": "debuff",
+    "subtype": "blind",
+    "domain": "accuracy",
+    "polarity": "reduce",
+    "damage_type": ""
+  },
+
+  "crit_chance_up": {
+    "type": "buff",
+    "subtype": "",
+    "domain": "critical_chance",
+    "polarity": "increase",
+    "damage_type": ""
+  },
+
+  "damage_amp": {
+    "type": "buff",
+    "subtype": "",
+    "domain": "damage",
+    "polarity": "increase",
+    "damage_type": ""
+  },
+
+  "mana_restore": {
+    "type": "restore",
+    "subtype": "",
+    "domain": "mana",
+    "polarity": "restore",
+    "damage_type": ""
+  },
+
+  "mana_burn": {
+    "type": "debuff",
+    "subtype": "",
+    "domain": "mana",
+    "polarity": "reduce",
+    "damage_type": ""
+  }
+}

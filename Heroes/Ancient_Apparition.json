@@ -1,0 +1,36 @@
+{
+    "name":"Ancient_Apparition",
+    "kit": {
+        "1": {
+            "function": "attack",
+            "description": {
+                "delivery": "ranged"
+            }
+        },
+        "2": {
+            "function": "passive",
+            "description": {
+                "duration_class": "while_active",
+                "effects": [
+                    {
+                        "type": "debuff",
+                        "applies": "on_caster_spell_affect",
+                        "target": "enemy",
+                        "ability_interactions": ["dispellable"],
+                        "domain": "movement_speed",
+                        "polarity": "reduce"
+                    },
+                    {
+                        "type": "DoT",
+                        "applies": "on_caster_spell_affect",
+                        "target": "enemy",
+                        "ability_interactions": ["dispellable"],
+                        "domain": "health",
+                        "polarity": "reduce",
+                        "damage_type": "magical"
+                    }
+                ]
+            }
+        }
+    }
+}
