@@ -1,0 +1,4 @@
+{
+    "name": "Largo",
+    "roles": ["controller","save","buffer"]
+}

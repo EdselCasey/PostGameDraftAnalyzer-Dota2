@@ -1,0 +1,4 @@
+{
+    "name": "IO",
+    "roles": ["save","buffer"]
+}
