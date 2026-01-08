@@ -43,20 +43,20 @@ def load_team(hero_files):
 
 # list of heroes in the team
 team_a = [
-    "Chen.json",
-    "Razor.json",
-    "Enigma.json",
-    "Undying.json",
-    "Zeus.json"
+    "Muerta.json",
+    "Disruptor.json",
+    "Timbersaw.json",
+    "Viper.json",
+    "Gyrocopter.json"
     
 ]
 
 team_b = [
-   "Clinkz.json",
+   "Jakiro.json",
+   "SkywrathMage.json",
+   "EmberSpirit.json",
    "Bristleback.json",
-   "PhantomLancer.json",
-   "WitchDoctor.json",
-   "ShadowShaman.json"
+   "TemplarAssassin.json"
 ]
 
 team_a_totals = {}
