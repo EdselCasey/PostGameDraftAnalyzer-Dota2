@@ -90,21 +90,6 @@ for hero_file in team_b:
         for axis, value in roles_data[role].items():
             team_b_totals[axis] = team_b_totals.get(axis, 0) + value
 
-# output
-print("TEAM A TOTALS")
-print("*************")
-for axis, value in sorted(team_a_totals.items()):
-    print(f"{axis:15}: {value}")
-print("")
-print("\nTEAM A HEROES")
-print("-------------")
-print(", ".join(team_a_names))
-print("")
-print("")
-print("TEAM B TOTALS")
-print("*************")
-for axis, value in sorted(team_b_totals.items()):
-    print(f"{axis:15}: {value}")
 
 def survivability(delta):
     return (
@@ -356,13 +341,20 @@ enemy_weaknesses = {k: v for k, v in baseline_b.items() if v < 0}
 
 weaknesses = extract_weaknesses(baseline)
 
-print("")
-print("\nTEAM B HEROES")
+# output
+print("\nTEAM A HEROES")
 print("-------------")
-print(", ".join(team_b_names))
+print(", ".join(team_a_names))
 print("")
 print("")
-print("Team Delta")
+print("TEAM A TOTALS")
+print("*************")
+for axis, value in sorted(team_a_totals.items()):
+    print(f"{axis:15}: {value}")
+print("")
+print("")
+
+print("Team A Delta")
 print("*************")
 for axis, value in sorted(delta.items()):
     print(f"{axis:16}: {value}")
@@ -370,19 +362,27 @@ for axis, value in sorted(delta.items()):
 print("")
 print("")
 print("")
-print("Team Axes")
+print("Team A Axes")
 print("*************")
 for axis, value in sorted(team_axes.items()):
-    print(f"{axis:7}: {value}")
+    print(f"{axis:9}: {value}")
 
-
+print("\nTEAM B HEROES")
+print("-------------")
+print(", ".join(team_b_names))
+print("")
+print("")
+print("TEAM B TOTALS")
+print("*************")
+for axis, value in sorted(team_b_totals.items()):
+    print(f"{axis:15}: {value}")
 print("")
 print("")
 print("")
 print("Team B Axes")
 print("*************")
 for axis, value in sorted(team_b_axes.items()):
-    print(f"{axis:7}: {value}")
+    print(f"{axis:9}: {value}")
 
 results = recommend_heroes(team_a, team_b, weaknesses, enemy_weaknesses)
 
