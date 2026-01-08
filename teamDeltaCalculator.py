@@ -12,7 +12,8 @@ WEAKNESS_KEYS = [
     "BurstResilience",
     "CounterEngage",
     "Survivability",
-    "ObjectiveConversion"
+    "ObjectiveConversion",
+    "FightPersistence"
 ]
 
 HEROES_DIR = Path("Heroes")
@@ -43,20 +44,20 @@ def load_team(hero_files):
 
 # list of heroes in the team
 team_a = [
-    "QueenofPain.json",
+    "StormSpirit.json",
     "Disruptor.json",
-    "DarkSeer.json",
-    "Tiny.json",
-    "Gyrocopter.json"
+    "Underlord.json",
+    "BountyHunter.json",
+    "TrollWarlord.json"
     
 ]
 
 team_b = [
-   "Huskar.json",
-   "MonkeyKing.json",
-   "Slardar.json",
+   "Brewmaster.json",
+   "IO.json",
+   "Muerta.json",
    "Tusk.json",
-   "Phoenix.json"
+   "Nature'sProphet.json"
 ]
 
 team_a_totals = {}
@@ -168,6 +169,15 @@ def map_lock(delta):
         + 0.5 * delta.get("Durability", 0)
     )
 
+def fight_persistence(delta):
+    return (
+        delta.get("SustainedDamage", 0)
+        + 0.5 * delta.get("Engagement", 0)
+        + 0.5 * delta.get("Control", 0)
+        - 2.0 * delta.get("CounterEngage", 0)
+        - 0.5 * delta.get("MapLock", 0)
+    )
+
 
 def compute_team_axes(delta):
     return {
@@ -179,7 +189,8 @@ def compute_team_axes(delta):
         "MapReach": map_reach(delta),
         "MapLock": map_lock(delta),
         "MapCollapseRisk": map_collapse_risk(delta, burst_resilience(delta)),
-        "ObjectiveConversion": objective_conversion(delta)
+        "ObjectiveConversion": objective_conversion(delta),
+        "FightPersistence": fight_persistence(delta)
     }
 
 
@@ -244,7 +255,8 @@ def recommend_heroes(team_a_files, team_b_files, weaknesses, enemy_weaknesses):
             "Survivability": sim_axes["Survivability"],
             "ObjectiveConversion": sim_axes["ObjectiveConversion"],
             "MapReach": sim_axes["MapReach"],
-            "MapLock": sim_axes["MapLock"]
+            "MapLock": sim_axes["MapLock"],
+            "FightPersistence": sim_axes["FightPersistence"]
         }
 
         # B vs A (for exploitation)
@@ -259,7 +271,8 @@ def recommend_heroes(team_a_files, team_b_files, weaknesses, enemy_weaknesses):
             "Survivability": sim_axes_b["Survivability"],
             "ObjectiveConversion": sim_axes_b["ObjectiveConversion"],
             "MapReach": sim_axes_b["MapReach"],
-            "MapLock": sim_axes_b["MapLock"]
+            "MapLock": sim_axes_b["MapLock"],
+            "FightPersistence": sim_axes_b["FightPersistence"]
         }
 
         # -----------------------------
@@ -298,7 +311,8 @@ team_axes = {
     "map_collapse_risk": map_collapse_risk(delta, burst_resilience(delta)),
     "objective_conversion":objective_conversion(delta),
     "map_reach":map_reach(delta),
-    "map_lock":map_lock(delta)
+    "map_lock":map_lock(delta),
+    "fight_persistence":fight_persistence(delta)
 }
 
 team_b_axes = {
@@ -310,7 +324,8 @@ team_b_axes = {
     "map_collapse_risk": map_collapse_risk(delta_b, burst_resilience(delta_b)),
     "objective_conversion":objective_conversion(delta_b),
     "map_reach":map_reach(delta_b),
-    "map_lock":map_lock(delta_b)
+    "map_lock":map_lock(delta_b),
+    "fight_persistence":fight_persistence(delta_b)
 }
 
 baseline = {
@@ -321,7 +336,8 @@ baseline = {
     "BurstResilience": team_axes["burst_resilience"],
     "CounterEngage": team_axes["counter_engage"],
     "Survivability": team_axes["survivability"],
-    "ObjectiveConversion":team_axes["objective_conversion"]
+    "ObjectiveConversion":team_axes["objective_conversion"],
+    "FightPersistence": team_axes["fight_persistence"]
 }
 
 
@@ -333,7 +349,8 @@ baseline_b = {
     "BurstResilience": team_b_axes["burst_resilience"],
     "CounterEngage": team_b_axes["counter_engage"],
     "Survivability": team_b_axes["survivability"],
-    "ObjectiveConversion":team_b_axes["objective_conversion"]
+    "ObjectiveConversion":team_b_axes["objective_conversion"],
+    "FightPersistence": team_axes["fight_persistence"]
 }
 
 

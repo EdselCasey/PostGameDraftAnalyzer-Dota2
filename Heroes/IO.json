@@ -1,4 +1,4 @@
 {
     "name": "IO",
-    "roles": ["save","buffer"]
+    "roles": ["save","buffer","diver"]
 }
