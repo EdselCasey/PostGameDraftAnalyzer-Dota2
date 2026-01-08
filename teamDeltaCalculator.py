@@ -43,20 +43,20 @@ def load_team(hero_files):
 
 # list of heroes in the team
 team_a = [
-    "Muerta.json",
+    "QueenofPain.json",
     "Disruptor.json",
-    "Timbersaw.json",
-    "Viper.json",
+    "DarkSeer.json",
+    "Tiny.json",
     "Gyrocopter.json"
     
 ]
 
 team_b = [
-   "Jakiro.json",
-   "SkywrathMage.json",
-   "EmberSpirit.json",
-   "Bristleback.json",
-   "TemplarAssassin.json"
+   "Huskar.json",
+   "MonkeyKing.json",
+   "Slardar.json",
+   "Tusk.json",
+   "Phoenix.json"
 ]
 
 team_a_totals = {}
@@ -346,22 +346,6 @@ print("\nTEAM A HEROES")
 print("-------------")
 print(", ".join(team_a_names))
 print("")
-print("")
-print("TEAM A TOTALS")
-print("*************")
-for axis, value in sorted(team_a_totals.items()):
-    print(f"{axis:15}: {value}")
-print("")
-print("")
-
-print("Team A Delta")
-print("*************")
-for axis, value in sorted(delta.items()):
-    print(f"{axis:16}: {value}")
-
-print("")
-print("")
-print("")
 print("Team A Axes")
 print("*************")
 for axis, value in sorted(team_axes.items()):
@@ -370,14 +354,6 @@ for axis, value in sorted(team_axes.items()):
 print("\nTEAM B HEROES")
 print("-------------")
 print(", ".join(team_b_names))
-print("")
-print("")
-print("TEAM B TOTALS")
-print("*************")
-for axis, value in sorted(team_b_totals.items()):
-    print(f"{axis:15}: {value}")
-print("")
-print("")
 print("")
 print("Team B Axes")
 print("*************")
