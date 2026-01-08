@@ -7,7 +7,8 @@
     "SingleTarget": 0,
     "VisionControl": 1,
     "Tempo": 1,
-    "VisionAccess": 1,
+    "VisionAccess": 2,
+    "VisionConversion": 1,
     "SustainedDamage": 0,
     "AreaDamage": 0
   },
@@ -20,6 +21,7 @@
     "VisionControl": 1,
     "Tempo": -1,
     "VisionAccess": 0,
+    "VisionConversion": 0,
     "SustainedDamage": 2,
     "AreaDamage": 0
   },
@@ -32,6 +34,7 @@
     "VisionControl": 0,
     "Tempo": 1,
     "VisionAccess": 1,
+    "VisionConversion": 2,
     "SustainedDamage": 0,
     "AreaDamage": 0
   },
@@ -44,6 +47,7 @@
     "VisionControl": 2,
     "Tempo": 0,
     "VisionAccess": 1,
+    "VisionConversion": 0,
     "SustainedDamage": 0,
     "AreaDamage": 2
   },
@@ -56,6 +60,7 @@
     "VisionControl": 2,
     "Tempo": 2,
     "VisionAccess": -1,
+    "VisionConversion": 2,
     "SustainedDamage": -1,
     "AreaDamage": 1
   },
@@ -68,6 +73,7 @@
     "VisionControl": 2,
     "Tempo": 2,
     "VisionAccess": 0,
+    "VisionConversion": 1,
     "SustainedDamage": 0,
     "AreaDamage": 0
   },
@@ -80,6 +86,7 @@
     "VisionControl": 1,
     "Tempo": 0,
     "VisionAccess": -1,
+    "VisionConversion": 0,
     "SustainedDamage": 2,
     "AreaDamage": 2
   },
@@ -92,6 +99,7 @@
     "VisionControl": 1,
     "Tempo": 1,
     "VisionAccess": -1,
+    "VisionConversion": 0,
     "SustainedDamage": 1,
     "AreaDamage": -1
   },
@@ -104,6 +112,7 @@
     "VisionControl": 0,
     "Tempo": -1,
     "VisionAccess": 0,
+    "VisionConversion": 0,
     "SustainedDamage": 0,
     "AreaDamage": 0
   },
@@ -113,9 +122,10 @@
     "Control": 1,
     "BurstDamage": 1,
     "SingleTarget": 2,
-    "VisionControl": 2,
+    "VisionControl": 1,
     "Tempo": 0,
     "VisionAccess": 1,
+    "VisionConversion": 0,
     "SustainedDamage": 2,
     "AreaDamage": 0
   },
@@ -128,6 +138,7 @@
     "VisionControl": 2,
     "Tempo": -1,
     "VisionAccess": 0,
+    "VisionConversion": 2,
     "SustainedDamage": 2,
     "AreaDamage": -1
   },
@@ -140,6 +151,7 @@
     "VisionControl": 2,
     "Tempo": 1,
     "VisionAccess": -1,
+    "VisionConversion": 1,
     "SustainedDamage": 1,
     "AreaDamage": 2
   },
@@ -149,9 +161,10 @@
     "Control": -1,
     "BurstDamage": 0,
     "SingleTarget": 0,
-    "VisionControl": 1,
+    "VisionControl": 0,
     "Tempo": 2,
     "VisionAccess": 1,
+    "VisionConversion": 0,
     "SustainedDamage": 0,
     "AreaDamage": 0
   },
@@ -164,6 +177,7 @@
     "VisionControl": 1,
     "Tempo": 2,
     "VisionAccess": 1,
+    "VisionConversion": 1,
     "SustainedDamage": 2,
     "AreaDamage": 0
   },
@@ -175,8 +189,22 @@
     "SingleTarget": 0,
     "VisionControl": 2,
     "Tempo": 1,
-    "VisionAccess": 1,
+    "VisionAccess": 0,
+    "VisionConversion": 0,
     "SustainedDamage": 2,
     "AreaDamage": 2
+  },
+  "pusher": {
+    "Durability": 0,
+    "Engagement": 0,
+    "Control": 0,
+    "BurstDamage": 0,
+    "SingleTarget": 0,
+    "VisionControl": 0,
+    "Tempo": 1,
+    "VisionAccess": 0,
+    "VisionConversion": 2,
+    "SustainedDamage": 0,
+    "AreaDamage": 0
   }
 }

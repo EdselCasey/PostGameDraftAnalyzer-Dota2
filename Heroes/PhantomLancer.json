@@ -1,4 +1,4 @@
 {
     "name": "Phantom Lancer",
-    "roles": ["multiunit","duelist"]
+    "roles": ["multiunit","duelist","pusher"]
 }

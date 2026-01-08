@@ -6,11 +6,13 @@ team_b_names = []
 
 WEAKNESS_KEYS = [
     "MapCollapseRisk",
-    "MapAccessVsControl",
+    "MapReach",
+    "MapLock",
     "LateGame",
     "BurstResilience",
     "CounterEngage",
-    "Survivability"
+    "Survivability",
+    "ObjectiveConversion"
 ]
 
 HEROES_DIR = Path("Heroes")
@@ -145,20 +147,42 @@ def counter_engage(delta):
         + 0.5 * delta.get("Durability", 0)
     )
 
-def map_access_vs_control(delta):
-    return (
-        delta.get("VisionAccess", 0)
-        - delta.get("VisionControl", 0)
-    )
-
 def map_collapse_risk(delta, burst_resilience):
     return (
         - delta.get("VisionAccess", 0)
+        - 0.75 * delta.get("VisionConversion", 0)
         - delta.get("Durability", 0)
         - burst_resilience
         + delta.get("AreaDamage", 0)
         + delta.get("SustainedDamage", 0)
     )
+
+def objective_conversion(delta):
+    return (
+        delta.get("Tempo", 0) * 0.5
+        + delta.get("SustainedDamage", 0)
+        + delta.get("AreaDamage", 0) * 0.5
+        + delta.get("VisionConversion", 0)
+        + delta.get("VisionControl", 0) * 0.5
+    )
+
+def map_reach(delta):
+    return (
+        delta.get("VisionAccess", 0)
+        + 0.5 * delta.get("VisionConversion", 0)
+        + 0.5 * delta.get("Engagement", 0)
+        + 0.25 * delta.get("Tempo", 0)
+        + 0.25 * delta.get("Durability", 0)
+    )
+
+def map_lock(delta):
+    return (
+        delta.get("VisionControl", 0)
+        + delta.get("AreaDamage", 0)
+        + delta.get("Control", 0)
+        + 0.5 * delta.get("Durability", 0)
+    )
+
 
 def compute_team_axes(delta):
     return {
@@ -167,8 +191,10 @@ def compute_team_axes(delta):
         "EarlyGame": early_game(delta),
         "Survivability": survivability(delta),
         "BurstResilience": burst_resilience(delta),
-        "MapAccessVsControl": map_access_vs_control(delta),
-        "MapCollapseRisk": map_collapse_risk(delta, burst_resilience(delta))
+        "MapReach": map_reach(delta),
+        "MapLock": map_lock(delta),
+        "MapCollapseRisk": map_collapse_risk(delta, burst_resilience(delta)),
+        "ObjectiveConversion": objective_conversion(delta)
     }
 
 
@@ -227,11 +253,13 @@ def recommend_heroes(team_a_files, team_b_files, weaknesses, enemy_weaknesses):
 
         sim_metrics = {
             "MapCollapseRisk": sim_axes["MapCollapseRisk"],
-            "MapAccessVsControl": sim_axes["MapAccessVsControl"],
             "LateGame": sim_axes["LateGame"],
             "BurstResilience": sim_axes["BurstResilience"],
             "CounterEngage": sim_axes["CounterEngage"],
-            "Survivability": sim_axes["Survivability"]
+            "Survivability": sim_axes["Survivability"],
+            "ObjectiveConversion": sim_axes["ObjectiveConversion"],
+            "MapReach": sim_axes["MapReach"],
+            "MapLock": sim_axes["MapLock"]
         }
 
         # B vs A (for exploitation)
@@ -240,11 +268,13 @@ def recommend_heroes(team_a_files, team_b_files, weaknesses, enemy_weaknesses):
 
         sim_metrics_b = {
             "MapCollapseRisk": sim_axes_b["MapCollapseRisk"],
-            "MapAccessVsControl": sim_axes_b["MapAccessVsControl"],
             "LateGame": sim_axes_b["LateGame"],
             "BurstResilience": sim_axes_b["BurstResilience"],
             "CounterEngage": sim_axes_b["CounterEngage"],
-            "Survivability": sim_axes_b["Survivability"]
+            "Survivability": sim_axes_b["Survivability"],
+            "ObjectiveConversion": sim_axes_b["ObjectiveConversion"],
+            "MapReach": sim_axes_b["MapReach"],
+            "MapLock": sim_axes_b["MapLock"]
         }
 
         # -----------------------------
@@ -280,8 +310,10 @@ team_axes = {
     "early_game": early_game(delta),
     "survivability": survivability(delta),
     "burst_resilience": burst_resilience(delta),
-    "map_access_vs_control": map_access_vs_control(delta),
-    "map_collapse_risk": map_collapse_risk(delta, burst_resilience(delta))
+    "map_collapse_risk": map_collapse_risk(delta, burst_resilience(delta)),
+    "objective_conversion":objective_conversion(delta),
+    "map_reach":map_reach(delta),
+    "map_lock":map_lock(delta)
 }
 
 team_b_axes = {
@@ -290,27 +322,35 @@ team_b_axes = {
     "early_game": early_game(delta_b),
     "survivability": survivability(delta_b),
     "burst_resilience": burst_resilience(delta_b),
-    "map_access_vs_control": map_access_vs_control(delta_b),
-    "map_collapse_risk": map_collapse_risk(delta_b, burst_resilience(delta_b))
+    "map_collapse_risk": map_collapse_risk(delta_b, burst_resilience(delta_b)),
+    "objective_conversion":objective_conversion(delta_b),
+    "map_reach":map_reach(delta_b),
+    "map_lock":map_lock(delta_b)
 }
 
 baseline = {
-    "MapCollapseRisk": map_collapse_risk(delta, burst_resilience(delta)),
-    "MapAccessVsControl": map_access_vs_control(delta),
+    "MapCollapseRisk": team_axes["map_collapse_risk"],
+    "MapReach": team_axes["map_reach"],
+    "MapLock": team_axes["map_lock"],
     "LateGame": team_axes["late_game"],
     "BurstResilience": team_axes["burst_resilience"],
     "CounterEngage": team_axes["counter_engage"],
-    "Survivability": team_axes["survivability"]
+    "Survivability": team_axes["survivability"],
+    "ObjectiveConversion":team_axes["objective_conversion"]
 }
 
+
 baseline_b = {
-    "Survivability": survivability(delta_b),
-    "LateGame": late_game(delta_b),
-    "BurstResilience": burst_resilience(delta_b),
-    "CounterEngage": counter_engage(delta_b),
-    "MapCollapseRisk": map_collapse_risk(delta_b, burst_resilience(delta_b)),
-    "MapAccessVsControl": map_access_vs_control(delta_b)
+    "MapCollapseRisk": team_b_axes["map_collapse_risk"],
+    "MapReach": team_b_axes["map_reach"],
+    "MapLock": team_b_axes["map_lock"],
+    "LateGame": team_b_axes["late_game"],
+    "BurstResilience": team_b_axes["burst_resilience"],
+    "CounterEngage": team_b_axes["counter_engage"],
+    "Survivability": team_b_axes["survivability"],
+    "ObjectiveConversion":team_b_axes["objective_conversion"]
 }
+
 
 enemy_weaknesses = {k: v for k, v in baseline_b.items() if v < 0}
 
@@ -325,33 +365,24 @@ print("")
 print("Team Delta")
 print("*************")
 for axis, value in sorted(delta.items()):
-    print(f"{axis:15}: {value}")
+    print(f"{axis:16}: {value}")
 
 print("")
 print("")
 print("")
 print("Team Axes")
 print("*************")
-print("counter engage: ",team_axes["counter_engage"])
-print("survivability: ",team_axes["survivability"])
-print("late game: ",team_axes["late_game"])
-print("burst resilience: ",team_axes["burst_resilience"])
-print("early game: ",team_axes["early_game"])
-print("Map Access vs Control  : ",team_axes["map_access_vs_control"])
-print("Map Collapse Risk  : ",team_axes["map_collapse_risk"])
+for axis, value in sorted(team_axes.items()):
+    print(f"{axis:7}: {value}")
+
 
 print("")
 print("")
 print("")
 print("Team B Axes")
 print("*************")
-print("counter engage: ",team_b_axes["counter_engage"])
-print("survivability: ",team_b_axes["survivability"])
-print("late game: ",team_b_axes["late_game"])
-print("burst resilience: ",team_b_axes["burst_resilience"])
-print("early game: ",team_b_axes["early_game"])
-print("Map Access vs Control  : ",team_b_axes["map_access_vs_control"])
-print("Map Collapse Risk  : ",team_b_axes["map_collapse_risk"])
+for axis, value in sorted(team_b_axes.items()):
+    print(f"{axis:7}: {value}")
 
 results = recommend_heroes(team_a, team_b, weaknesses, enemy_weaknesses)
 

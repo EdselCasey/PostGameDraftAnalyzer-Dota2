@@ -1,4 +1,4 @@
 {
     "name": "Chen",
-    "roles": ["multiunit","save"]
+    "roles": ["multiunit","save","pusher"]
 }

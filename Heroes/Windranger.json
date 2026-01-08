@@ -1,4 +1,4 @@
 {
     "name": "Windranger",
-    "roles": ["marksman","controller"]
+    "roles": ["marksman","controller","pusher"]
 }

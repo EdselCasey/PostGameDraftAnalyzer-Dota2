@@ -1,4 +1,4 @@
 {
     "name": "Arc Warden",
-    "roles": ["marksman","artillery","multiunit"]
+    "roles": ["marksman","artillery","multiunit","pusher"]
 }
