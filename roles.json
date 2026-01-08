@@ -20,7 +20,7 @@
     "SingleTarget": 2,
     "VisionControl": 1,
     "Tempo": -1,
-    "VisionAccess": 0,
+    "VisionAccess": -1,
     "VisionConversion": 0,
     "SustainedDamage": 2,
     "AreaDamage": 0
@@ -46,7 +46,7 @@
     "SingleTarget": -1,
     "VisionControl": 2,
     "Tempo": 0,
-    "VisionAccess": 1,
+    "VisionAccess": 2,
     "VisionConversion": 0,
     "SustainedDamage": 0,
     "AreaDamage": 2
@@ -59,7 +59,7 @@
     "SingleTarget": 2,
     "VisionControl": 2,
     "Tempo": 2,
-    "VisionAccess": -1,
+    "VisionAccess": 0,
     "VisionConversion": 2,
     "SustainedDamage": -1,
     "AreaDamage": 1
@@ -85,7 +85,7 @@
     "SingleTarget": 0,
     "VisionControl": 1,
     "Tempo": 0,
-    "VisionAccess": -1,
+    "VisionAccess": 0,
     "VisionConversion": 0,
     "SustainedDamage": 2,
     "AreaDamage": 2
@@ -111,7 +111,7 @@
     "SingleTarget": 0,
     "VisionControl": 0,
     "Tempo": -1,
-    "VisionAccess": 0,
+    "VisionAccess": -1,
     "VisionConversion": 0,
     "SustainedDamage": 0,
     "AreaDamage": 0
@@ -124,7 +124,7 @@
     "SingleTarget": 2,
     "VisionControl": 1,
     "Tempo": 0,
-    "VisionAccess": 1,
+    "VisionAccess": 0,
     "VisionConversion": 0,
     "SustainedDamage": 2,
     "AreaDamage": 0
@@ -137,7 +137,7 @@
     "SingleTarget": 2,
     "VisionControl": 2,
     "Tempo": -1,
-    "VisionAccess": 0,
+    "VisionAccess": -1,
     "VisionConversion": 2,
     "SustainedDamage": 2,
     "AreaDamage": -1
@@ -163,8 +163,8 @@
     "SingleTarget": 0,
     "VisionControl": 0,
     "Tempo": 2,
-    "VisionAccess": 1,
-    "VisionConversion": 0,
+    "VisionAccess": 2,
+    "VisionConversion": 1,
     "SustainedDamage": 0,
     "AreaDamage": 0
   },
@@ -176,7 +176,7 @@
     "SingleTarget": 2,
     "VisionControl": 1,
     "Tempo": 2,
-    "VisionAccess": 1,
+    "VisionAccess": 2,
     "VisionConversion": 1,
     "SustainedDamage": 2,
     "AreaDamage": 0
@@ -189,7 +189,7 @@
     "SingleTarget": 0,
     "VisionControl": 2,
     "Tempo": 1,
-    "VisionAccess": 0,
+    "VisionAccess": 1,
     "VisionConversion": 0,
     "SustainedDamage": 2,
     "AreaDamage": 2

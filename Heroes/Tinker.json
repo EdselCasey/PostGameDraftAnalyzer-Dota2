@@ -1,4 +1,4 @@
 {
     "name": "Tinker",
-    "roles": ["artillery"]
+    "roles": ["artillery","save","diver"]
 }
