@@ -1,4 +1,5 @@
 {
     "name": "Troll Warlord",
-    "roles": ["duelist","marksman","pusher"]
+    "roles": ["duelist","marksman","pusher"],
+    "alias": ["troll"]
 }

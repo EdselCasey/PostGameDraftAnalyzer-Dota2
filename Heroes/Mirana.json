@@ -1,4 +1,5 @@
 {
     "name": "Mirana",
-    "roles": ["scout","artillery","diver"]
+    "roles": ["scout","artillery","diver"],
+    "alias": ["rana","mir"]
 }

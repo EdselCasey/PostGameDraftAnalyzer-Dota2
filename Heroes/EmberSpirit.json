@@ -1,4 +1,5 @@
 {
     "name": "Ember Spirit",
-    "roles": ["diver","controller"]
+    "roles": ["diver","controller"],
+    "alias": ["ember"]
 }

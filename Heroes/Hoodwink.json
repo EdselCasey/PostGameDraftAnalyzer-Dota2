@@ -1,4 +1,5 @@
 {
     "name": "Hoodwink",
-    "roles": ["controller","artillery"]
+    "roles": ["controller","artillery"],
+    "alias": ["hood","hw"]
 }

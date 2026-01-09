@@ -1,4 +1,5 @@
 {
     "name": "Shadow Shaman",
-    "roles": ["controller","zoner","pusher"]
+    "roles": ["controller","zoner","pusher"],
+    "alias": ["ss","shaman","rhasta"]
 }

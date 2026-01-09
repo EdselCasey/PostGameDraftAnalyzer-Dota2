@@ -1,4 +1,5 @@
 {
     "name": "Pangolier",
-    "roles": ["diver"]
+    "roles": ["diver"],
+    "alias": ["pango"]
 }

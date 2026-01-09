@@ -1,4 +1,5 @@
 {
     "name": "Grimstroke",
-    "roles": ["debuffer","controller","artillery"]
+    "roles": ["debuffer","controller","artillery"],
+    "alias": ["grim"]
 }

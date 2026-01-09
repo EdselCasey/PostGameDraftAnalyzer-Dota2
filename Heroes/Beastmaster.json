@@ -1,4 +1,5 @@
 {
     "name": "Beastmaster",
-    "roles": ["multiunit","controller","pusher"]
+    "roles": ["multiunit","controller","pusher"],
+    "alias": ["beast"]
 }

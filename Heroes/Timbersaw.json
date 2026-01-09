@@ -1,4 +1,5 @@
 {
     "name": "Timbersaw",
-    "roles": ["diver","tank"]
+    "roles": ["diver","tank"],
+    "alias": ["timber"]
 }

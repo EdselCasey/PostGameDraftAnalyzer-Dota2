@@ -1,4 +1,5 @@
 {
     "name": "Night Stalker",
-    "roles": ["bruiser","scout"]
+    "roles": ["bruiser","scout"],
+    "alias": ["ns","night"]
 }

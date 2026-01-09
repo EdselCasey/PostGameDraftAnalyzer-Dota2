@@ -1,4 +1,5 @@
 {
     "name": "Slardar",
-    "roles": ["bruiser","duelist","controller"]
+    "roles": ["bruiser","duelist","controller"],
+    "alias": ["slar"]
 }

@@ -1,4 +1,5 @@
 {
     "name": "Earth Spirit",
-    "roles": ["diver","controller"]
+    "roles": ["diver","controller"],
+    "alias": ["espirit"]
 }

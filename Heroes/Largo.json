@@ -1,4 +1,5 @@
 {
     "name": "Largo",
-    "roles": ["controller","save","buffer"]
+    "roles": ["controller","save","buffer"],
+    "alias": ["bard","frog","larg"]
 }

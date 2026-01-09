@@ -1,4 +1,5 @@
 {
     "name": "Lion",
-    "roles": ["controller","nuker"]
+    "roles": ["controller","nuker"],
+    "alias": []
 }

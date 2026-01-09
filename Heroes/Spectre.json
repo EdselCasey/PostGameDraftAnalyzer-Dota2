@@ -1,4 +1,5 @@
 {
     "name": "Spectre",
-    "roles": ["diver","duelist"]
+    "roles": ["diver","duelist"],
+    "alias": ["spec"]
 }

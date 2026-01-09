@@ -1,4 +1,5 @@
 {
     "name": "Drow Ranger",
-    "roles": ["marksman"]
+    "roles": ["marksman"],
+    "alias": ["drow","dr"]
 }

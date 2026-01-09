@@ -1,4 +1,5 @@
 {
     "name": "Zeus",
-    "roles": ["artillery","nuker"]
+    "roles": ["artillery","nuker"],
+    "alias": []
 }

@@ -1,4 +1,5 @@
 {
     "name": "Earth Shaker",
-    "roles": ["controller","nuker"]
+    "roles": ["controller","nuker"],
+    "alias": ["es","shaker"]
 }

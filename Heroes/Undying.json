@@ -1,4 +1,5 @@
 {
     "name": "Undying",
-    "roles": ["tank","zoner","save"]
+    "roles": ["tank","zoner","save"],
+    "alias": ["undy"]
 }

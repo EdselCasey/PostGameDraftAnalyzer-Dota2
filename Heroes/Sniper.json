@@ -1,4 +1,5 @@
 {
     "name": "Sniper",
-    "roles": ["marksman","artillery"]
+    "roles": ["marksman","artillery"],
+    "alias": []
 }

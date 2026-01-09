@@ -1,4 +1,5 @@
 {
     "name": "Viper",
-    "roles": ["marksman","debuffer","zoner"]
+    "roles": ["marksman","debuffer","zoner"],
+    "alias": []
 }

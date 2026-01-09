@@ -1,4 +1,5 @@
 {
     "name": "Clinkz",
-    "roles": ["scout","marksman","pusher"]
+    "roles": ["scout","marksman","pusher"],
+    "alias": ["clink"]
 }

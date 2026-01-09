@@ -1,4 +1,5 @@
 {
     "name":"Bane",
-    "roles":["debuffer","controller"]
+    "roles":["debuffer","controller"],
+    "alias": []
 }

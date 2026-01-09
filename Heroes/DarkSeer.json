@@ -1,4 +1,5 @@
 {
     "name": "Dark Seer",
-    "roles": ["battledancer"]
+    "roles": ["battledancer"],
+    "alias": ["seer","ds"]
 }

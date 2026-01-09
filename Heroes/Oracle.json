@@ -1,4 +1,5 @@
 {
     "name": "Oracle",
-    "roles": ["save","debuffer"]
+    "roles": ["save","debuffer"],
+    "alias": ["ora"]
 }

@@ -1,4 +1,5 @@
 {
     "name": "Mars",
-    "roles": ["zoner","controller","tank"]
+    "roles": ["zoner","controller","tank"],
+    "alias": []
 }

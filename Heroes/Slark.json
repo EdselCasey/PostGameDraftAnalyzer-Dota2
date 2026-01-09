@@ -1,4 +1,5 @@
 {
     "name": "Slark",
-    "roles": ["diver","duelist"]
+    "roles": ["diver","duelist"],
+    "alias": ["fish"]
 }

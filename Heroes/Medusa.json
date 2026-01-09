@@ -1,4 +1,5 @@
 {
     "name": "Medusa",
-    "roles": ["tank","marksman"]
+    "roles": ["tank","marksman"],
+    "alias": ["dusa"]
 }

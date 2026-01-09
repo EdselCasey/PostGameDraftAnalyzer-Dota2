@@ -1,4 +1,5 @@
 {
     "name": "Silencer",
-    "roles": ["marksman","debuffer"]
+    "roles": ["marksman","debuffer"],
+    "alias": []
 }

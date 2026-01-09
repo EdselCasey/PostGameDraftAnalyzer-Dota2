@@ -1,4 +1,5 @@
 {
     "name": "Meepo",
-    "roles": ["multiunit","duelist","pusher"]
+    "roles": ["multiunit","duelist","pusher"],
+    "alias": ["meep"]
 }

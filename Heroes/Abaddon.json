@@ -1,4 +1,5 @@
 {
     "name": "Abaddon",
-    "roles": ["bruiser","tank","save"]
+    "roles": ["bruiser","tank","save"],
+    "alias": ["aba"]
 }

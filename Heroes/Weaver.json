@@ -1,4 +1,5 @@
 {
     "name": "Weaver",
-    "roles": ["marksman","diver"]
+    "roles": ["marksman","diver"],
+    "alias": ["weav"]
 }

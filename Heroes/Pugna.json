@@ -1,4 +1,5 @@
 {
     "name": "Pugna",
-    "roles": ["artillery","save","zoner","pusher"]
+    "roles": ["artillery","save","zoner","pusher"],
+    "alias": ["pug"]
 }

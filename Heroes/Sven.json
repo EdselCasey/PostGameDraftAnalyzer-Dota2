@@ -1,4 +1,5 @@
 {
     "name": "Sven",
-    "roles": ["bruiser","duelist"]
+    "roles": ["bruiser","duelist"],
+    "alias": []
 }

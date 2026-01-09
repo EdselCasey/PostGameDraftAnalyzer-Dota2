@@ -1,4 +1,5 @@
 {
     "name":"Axe",
-    "roles": ["controller","tank"]
+    "roles": ["controller","tank"],
+    "alias": ["axe","ax"]
 }

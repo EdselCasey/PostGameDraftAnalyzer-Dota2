@@ -1,4 +1,5 @@
 {
     "name": "Primal Beast",
-    "roles": ["diver","controller","tank","pusher"]
+    "roles": ["diver","controller","tank","pusher"],
+    "alias": ["primal","pb"]
 }

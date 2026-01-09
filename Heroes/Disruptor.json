@@ -1,4 +1,5 @@
 {
     "name": "Disruptor",
-    "roles": ["zoner","debuffer","controller"]
+    "roles": ["zoner","debuffer","controller"],
+    "alias": ["rupt"]
 }

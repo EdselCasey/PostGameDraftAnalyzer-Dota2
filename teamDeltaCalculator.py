@@ -18,6 +18,7 @@ WEAKNESS_KEYS = [
 
 HEROES_DIR = Path("Heroes")
 
+
 # load roles
 with open("roles.json", "r") as f:
     roles_data = json.load(f)
@@ -44,20 +45,20 @@ def load_team(hero_files):
 
 # list of heroes in the team
 team_a = [
-    "Tiny.json",
-    "Enchantress.json",
-    "DrowRanger.json",
-    "Tidehunter.json",
-    "Lion.json"
+    "Jakiro.json",
+    "ShadowShaman.json",
+    "Underlord.json",
+    "BountyHunter.json",
+    "GyroCopter.json"
     
 ]
 
 team_b = [
-   "Viper.json",
+   "Axe.json",
    "Huskar.json",
-   "Slardar.json",
-   "Marci.json",
-   "ShadowDemon.json"
+   "TreantProtector.json",
+   "EmberSpirit.json",
+   "Muerta.json"
 ]
 
 team_a_totals = {}

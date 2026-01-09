@@ -1,4 +1,5 @@
 {
     "name": "Tidehunter",
-    "roles": ["tank","controller","bruiser"]
+    "roles": ["tank","controller","bruiser"],
+    "alias": ["tide"]
 }

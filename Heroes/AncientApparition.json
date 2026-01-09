@@ -1,4 +1,5 @@
 {
     "name": "Ancient Apparition",
-    "roles": ["artillery", "controller","zoner"]
+    "roles": ["artillery", "controller","zoner"],
+    "alias": ["aa"]
 }

@@ -1,4 +1,5 @@
 {
     "name": "Windranger",
-    "roles": ["marksman","controller","pusher"]
+    "roles": ["marksman","controller","pusher"],
+    "alias": ["wr","wind"]
 }

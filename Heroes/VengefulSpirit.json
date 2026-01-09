@@ -1,4 +1,5 @@
 {
     "name": "Vengeful Spirit",
-    "roles": ["controller"]
+    "roles": ["controller"],
+    "alias": ["venge"]
 }

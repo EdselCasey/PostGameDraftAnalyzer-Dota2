@@ -1,4 +1,5 @@
 {
     "name": "Warlock",
-    "roles": ["zoner","debuffer","multiunit","pusher"]
+    "roles": ["zoner","debuffer","multiunit","pusher"],
+    "alias": ["golem","lock"]
 }

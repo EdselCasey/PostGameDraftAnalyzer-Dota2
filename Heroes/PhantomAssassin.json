@@ -1,4 +1,5 @@
 {
     "name": "Phantom Assassin",
-    "roles": ["diver","duelist"]
+    "roles": ["diver","duelist"],
+    "alias": ["pa"]
 }

@@ -1,4 +1,5 @@
 {
     "name": "Monkey King",
-    "roles": ["duelist","diver","scout"]
+    "roles": ["duelist","diver","scout"],
+    "alias": ["mk","monk","monkey"]
 }

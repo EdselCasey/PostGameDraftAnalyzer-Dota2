@@ -1,4 +1,5 @@
 {
     "name": "Juggernaut",
-    "roles": ["duelist"]
+    "roles": ["duelist"],
+    "alias": ["jug"]
 }

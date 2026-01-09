@@ -1,4 +1,5 @@
 {
     "name": "Witch Doctor",
-    "roles": ["nuker"]
+    "roles": ["nuker"],
+    "alias": ["wd","witch","doctor"]
 }

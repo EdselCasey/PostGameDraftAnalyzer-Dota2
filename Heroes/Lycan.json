@@ -1,4 +1,5 @@
 {
     "name": "Lycan",
-    "roles": ["multiunit","bruiser","pusher"]
+    "roles": ["multiunit","bruiser","pusher"],
+    "alias": ["lyc","wolf"]
 }

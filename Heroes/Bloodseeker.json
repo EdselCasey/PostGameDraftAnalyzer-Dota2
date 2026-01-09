@@ -1,4 +1,5 @@
 {
     "name": "Bloodseeker",
-    "roles": ["duelist"]
+    "roles": ["duelist"],
+    "alias": ["bs","blood","seeker"]
 }

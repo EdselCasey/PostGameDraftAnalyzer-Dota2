@@ -1,4 +1,5 @@
 {
     "name": "Death Prohet",
-    "roles": ["battledancer","artillery","pusher"]
+    "roles": ["battledancer","artillery","pusher"],
+    "alias": ["dp","death"]
 }

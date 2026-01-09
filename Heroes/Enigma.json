@@ -1,4 +1,5 @@
 {
     "name": "Enigma",
-    "roles": ["nuker","multiunit","zoner","controller","pusher"]
+    "roles": ["nuker","multiunit","zoner","controller","pusher"],
+    "alias": ["nigma"]
 }

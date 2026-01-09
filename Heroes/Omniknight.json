@@ -1,4 +1,5 @@
 {
     "name": "Omniknight",
-    "roles": ["save","bruiser"]
+    "roles": ["save","bruiser"],
+    "alias": ["omni"]
 }

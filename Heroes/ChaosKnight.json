@@ -1,4 +1,5 @@
 {
     "name": "Chaos Knight",
-    "roles": ["multiunit","bruiser"]
+    "roles": ["multiunit","bruiser"],
+    "alias": ["ck"]
 }

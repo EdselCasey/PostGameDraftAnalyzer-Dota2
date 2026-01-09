@@ -1,4 +1,5 @@
 {
     "name": "Huskar",
-    "roles": ["bruiser","marksman"]
+    "roles": ["bruiser","marksman"],
+    "alias": ["husk"]
 }

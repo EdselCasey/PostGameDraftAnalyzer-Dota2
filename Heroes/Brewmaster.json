@@ -1,4 +1,5 @@
 {
     "name": "Brewmaster",
-    "roles": ["multiunit", "bruiser","tank"]
+    "roles": ["multiunit", "bruiser","tank"],
+    "alias": ["brew"]
 }

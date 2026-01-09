@@ -1,4 +1,5 @@
 {
     "name": "Visage",
-    "roles": ["marksman","multiunit","artillery","pusher"]
+    "roles": ["marksman","multiunit","artillery","pusher"],
+    "alias": []
 }

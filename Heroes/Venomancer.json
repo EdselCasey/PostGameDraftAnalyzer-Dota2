@@ -1,4 +1,5 @@
 {
     "name": "Venomancer",
-    "roles": ["zoner","artillery","debuffer","pusher"]
+    "roles": ["zoner","artillery","debuffer","pusher"],
+    "alias": ["veno"]
 }

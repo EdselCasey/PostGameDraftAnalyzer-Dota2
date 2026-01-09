@@ -1,4 +1,5 @@
 {
     "name": "Queen of Pain",
-    "roles": ["diver","nuker"]
+    "roles": ["diver","nuker"],
+    "alias": ["qop"]
 }

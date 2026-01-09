@@ -1,4 +1,5 @@
 {
     "name": "Enchantress",
-    "roles": ["marksman","multiunit","save","pusher"]
+    "roles": ["marksman","multiunit","save","pusher"],
+    "alias": ["ench"]
 }

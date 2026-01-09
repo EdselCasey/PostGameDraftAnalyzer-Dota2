@@ -1,4 +1,5 @@
 {
     "name": "Shadow Fiend",
-    "roles": ["marksman","nuker"]
+    "roles": ["marksman","nuker"],
+    "alias": ["sf"]
 }

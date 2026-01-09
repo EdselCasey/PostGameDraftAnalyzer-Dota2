@@ -1,4 +1,5 @@
 {
     "name": "Nature's Prophet",
-    "roles": ["marksman","diver","multiunit","pusher"]
+    "roles": ["marksman","diver","multiunit","pusher"],
+    "alias": ["np","nature","prophet"]
 }

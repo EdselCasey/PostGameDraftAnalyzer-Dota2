@@ -1,4 +1,5 @@
 {
     "name": "Alchemist",
-    "roles": ["bruiser"]
+    "roles": ["bruiser"],
+    "alias": ["alc", "alch"]
 }

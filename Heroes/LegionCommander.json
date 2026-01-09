@@ -1,4 +1,5 @@
 {
     "name": "Legion Commander",
-    "roles": ["duelist","controller","save"]
+    "roles": ["duelist","controller","save"],
+    "alias": ["legion","lc"]
 }

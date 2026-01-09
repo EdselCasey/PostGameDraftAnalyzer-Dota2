@@ -1,4 +1,5 @@
 {
     "name": "Phoenix",
-    "roles": ["diver","zoner"]
+    "roles": ["diver","zoner"],
+    "alias": ["bird","egg","feen"]
 }

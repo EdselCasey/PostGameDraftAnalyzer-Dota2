@@ -1,4 +1,5 @@
 {
     "name": "Muerta",
-    "roles": ["marksman","artillery","zoner"]
+    "roles": ["marksman","artillery","zoner"],
+    "alias": ["muer"]
 }

@@ -1,4 +1,5 @@
 {
     "name": "Dragon Knight",
-    "roles": ["bruiser","marksman"]
+    "roles": ["bruiser","marksman"],
+    "alias": ["dk","dragon"]
 }

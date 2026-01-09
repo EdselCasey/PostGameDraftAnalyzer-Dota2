@@ -1,4 +1,5 @@
 {
     "name": "Kez",
-    "roles": ["duelist","diver","scout"]
+    "roles": ["duelist","diver","scout"],
+    "alias": []
 }

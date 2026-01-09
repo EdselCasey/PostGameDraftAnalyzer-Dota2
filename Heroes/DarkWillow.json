@@ -1,4 +1,5 @@
 {
     "name": "Dark Willow",
-    "roles": ["zoner","artillery"]
+    "roles": ["zoner","artillery"],
+    "alias": ["dw","willow"]
 }

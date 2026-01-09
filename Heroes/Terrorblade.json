@@ -1,4 +1,5 @@
 {
     "name": "Terrorblade",
-    "roles": ["duelist","multiunit","marksman","pusher"]
+    "roles": ["duelist","multiunit","marksman","pusher"],
+    "alias": ["tb","terror"]
 }

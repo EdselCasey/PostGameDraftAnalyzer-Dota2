@@ -1,4 +1,5 @@
 {
     "name": "Invoker",
-    "roles": ["controller","artillery","multiunit","pusher"]
+    "roles": ["controller","artillery","multiunit","pusher"],
+    "alias": ["voker","carl"]
 }

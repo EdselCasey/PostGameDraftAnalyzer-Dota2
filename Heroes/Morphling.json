@@ -1,4 +1,5 @@
 {
     "name": "Morphling",
-    "roles": ["marksman","diver"]
+    "roles": ["marksman","diver"],
+    "alias": ["morph","mor","shotgun"]
 }

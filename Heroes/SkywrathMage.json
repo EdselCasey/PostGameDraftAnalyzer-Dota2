@@ -1,4 +1,5 @@
 {
     "name": "Skywrath Mage",
-    "roles": ["artillery"]
+    "roles": ["artillery"],
+    "alias": ["sky","skywrath"]
 }

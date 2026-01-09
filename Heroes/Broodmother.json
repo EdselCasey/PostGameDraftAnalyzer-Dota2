@@ -1,4 +1,5 @@
 {
     "name": "Broodmother",
-    "roles": ["scout","duelist","multiunit","pusher"]
+    "roles": ["scout","duelist","multiunit","pusher"],
+    "alias": ["brood","bm","spider"]
 }

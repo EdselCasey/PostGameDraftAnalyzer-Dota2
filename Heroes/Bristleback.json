@@ -1,4 +1,5 @@
 {
     "name":"Bristleback",
-    "roles": ["tank","battledancer"]
+    "roles": ["tank","battledancer"],
+    "alias": ["bb","bristle"]
 }

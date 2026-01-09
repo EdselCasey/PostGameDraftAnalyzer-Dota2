@@ -1,4 +1,5 @@
 {
     "name": "Templar Assassin",
-    "roles": ["marksman","scout"]
+    "roles": ["marksman","scout"],
+    "alias": ["templar","ta"]
 }

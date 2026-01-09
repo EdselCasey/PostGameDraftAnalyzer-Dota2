@@ -1,4 +1,5 @@
 {
     "name": "Dawnbreaker",
-    "roles": ["diver","bruiser"]
+    "roles": ["diver","bruiser"],
+    "alias": ["db","dawn"]
 }

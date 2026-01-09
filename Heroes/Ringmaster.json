@@ -1,4 +1,5 @@
 {
     "name": "Ringmaster",
-    "roles": ["save","controller","artillery","zoner"]
+    "roles": ["save","controller","artillery","zoner"],
+    "alias": ["ring"]
 }

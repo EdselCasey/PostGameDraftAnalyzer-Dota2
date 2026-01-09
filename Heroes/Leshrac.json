@@ -1,4 +1,5 @@
 {
     "name": "Leshrac",
-    "roles": ["battledancer","artillery"]
+    "roles": ["battledancer","artillery"],
+    "alias": ["lesh"]
 }

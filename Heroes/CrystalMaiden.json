@@ -1,4 +1,5 @@
 {
     "name": "Crystal Maiden",
-    "roles": ["controller","nuker"]
+    "roles": ["controller","nuker"],
+    "alias": ["cm","crystal","maiden"]
 }

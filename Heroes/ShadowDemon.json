@@ -1,4 +1,5 @@
 {
     "name": "Shadow Demon",
-    "roles": ["controller","save","artillery"]
+    "roles": ["controller","save","artillery"],
+    "alias": ["sd"]
 }

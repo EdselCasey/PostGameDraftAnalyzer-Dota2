@@ -1,4 +1,5 @@
 {
     "name": "Gyrocopter",
-    "roles": ["marksman","artillery"]
+    "roles": ["marksman","artillery"],
+    "alias": ["gyro"]
 }

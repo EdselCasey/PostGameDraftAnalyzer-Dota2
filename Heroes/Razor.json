@@ -1,4 +1,5 @@
 {
     "name": "Razor",
-    "roles": ["duelist","battledancer"]
+    "roles": ["duelist","battledancer"],
+    "alias": []
 }
