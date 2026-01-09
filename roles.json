@@ -84,7 +84,7 @@
     "BurstDamage": -1,
     "SingleTarget": 0,
     "VisionControl": 1,
-    "Tempo": 0,
+    "Tempo": 1,
     "VisionAccess": 0,
     "VisionConversion": 0,
     "SustainedDamage": 2,

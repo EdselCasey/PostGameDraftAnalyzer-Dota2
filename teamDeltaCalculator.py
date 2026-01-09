@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+import os
 
 team_a_names = []
 team_b_names = []
@@ -13,10 +14,55 @@ WEAKNESS_KEYS = [
     "CounterEngage",
     "Survivability",
     "ObjectiveConversion",
-    "FightPersistence"
+    "FightPersistence",
+    "MidGame"
 ]
 
+def normalize(text: str) -> str:
+    return text.lower().strip()
+
+def resolve_hero(input_name: str):
+    key = normalize(input_name)
+    return hero_index.get(key)
+
+def resolve_team(team_names):
+    resolved = []
+
+    for name in team_names:
+        hero = resolve_hero(name)
+
+        if not hero:
+            raise ValueError(f"Unknown hero or alias: '{name}'")
+
+        resolved.append(hero)
+
+    return resolved
+
+
+
 HEROES_DIR = Path("Heroes")
+
+heroes = []
+
+for filename in os.listdir(HEROES_DIR):
+    if not filename.endswith(".json"):
+        continue
+
+    with open(os.path.join(HEROES_DIR, filename), "r", encoding="utf-8") as f:
+        hero = json.load(f)
+        hero["_file"] = filename 
+        heroes.append(hero)
+
+hero_index = {}
+
+for hero in heroes:
+
+    # main name
+    hero_index[normalize(hero["name"])] = hero
+
+    # aliases
+    for alias in hero.get("alias", []):
+        hero_index[normalize(alias)] = hero
 
 
 # load roles
@@ -44,30 +90,33 @@ def load_team(hero_files):
     return totals, names
 
 # list of heroes in the team
-team_a = [
-    "Jakiro.json",
-    "ShadowShaman.json",
-    "Underlord.json",
-    "BountyHunter.json",
-    "GyroCopter.json"
+team_a_names_input = [
+    "muer",
+    "husk",
+    "tree",
+    "ember",
+    "axe"
     
 ]
 
-team_b = [
-   "Axe.json",
-   "Huskar.json",
-   "TreantProtector.json",
-   "EmberSpirit.json",
-   "Muerta.json"
+team_b_names_input = [
+   "gyro",
+   "jak",
+   "bh",
+   "underlord",
+   "ss"
 ]
+
+team_a_heroes = resolve_team(team_a_names_input)
+team_b_heroes = resolve_team(team_b_names_input)
+
+team_a_files = [hero["_file"] for hero in team_a_heroes]
+team_b_files = [hero["_file"] for hero in team_b_heroes]
 
 team_a_totals = {}
 team_b_totals = {}
 
-for hero_file in team_a:
-    with open(HEROES_DIR / hero_file, "r") as f:
-        hero = json.load(f)
-
+for hero in team_a_heroes:
     team_a_names.append(hero["name"])
 
     for role in hero["roles"]:
@@ -78,9 +127,7 @@ for hero_file in team_a:
         for axis, value in roles_data[role].items():
             team_a_totals[axis] = team_a_totals.get(axis, 0) + value
 
-for hero_file in team_b:
-    with open(HEROES_DIR / hero_file, "r") as f:
-        hero = json.load(f)
+for hero in team_b_heroes:
 
     team_b_names.append(hero["name"])    
 
@@ -93,6 +140,7 @@ for hero_file in team_b:
             team_b_totals[axis] = team_b_totals.get(axis, 0) + value
 
 
+
 def survivability(delta):
     return (
         delta.get("Durability", 0)
@@ -102,13 +150,14 @@ def survivability(delta):
         - delta.get("BurstDamage", 0)
     )
 
-def early_game(delta):
+def mid_game(delta):
     return (
         delta.get("Tempo", 0)
         + delta.get("Engagement", 0)
         + delta.get("BurstDamage", 0)
         + 0.5 * delta.get("VisionAccess", 0)
     )
+
 
 def burst_resilience(delta):
     return (
@@ -142,6 +191,15 @@ def map_collapse_risk(delta, burst_resilience):
         - burst_resilience
         + delta.get("AreaDamage", 0)
         + delta.get("SustainedDamage", 0)
+    )
+
+def early_game(delta):
+    return (
+        delta.get("Engagement", 0)
+        + delta.get("Control", 0)
+        + delta.get("Tempo", 0)
+        + 0.75 * delta.get("VisionAccess", 0)
+        - 0.5 * delta.get("SustainedDamage", 0)
     )
 
 def objective_conversion(delta):
@@ -191,18 +249,19 @@ def compute_team_axes(delta):
         "MapLock": map_lock(delta),
         "MapCollapseRisk": map_collapse_risk(delta, burst_resilience(delta)),
         "ObjectiveConversion": objective_conversion(delta),
-        "FightPersistence": fight_persistence(delta)
+        "FightPersistence": fight_persistence(delta),
+        "MidGame": mid_game(delta)
     }
 
 
-def compare_teams(team_a, team_b):
+def compare_teams(team_a_files, team_b_files):
     delta = {}
 
-    all_axes = set(team_a.keys()) | set(team_b.keys())
+    all_axes = set(team_a_files.keys()) | set(team_b_files.keys())
 
     for axis in all_axes:
-        a_val = team_a.get(axis, 0)
-        b_val = team_b.get(axis, 0)
+        a_val = team_a_files.get(axis, 0)
+        b_val = team_b_files.get(axis, 0)
         delta[axis] = a_val - b_val
 
     return delta
@@ -235,7 +294,7 @@ def recommend_heroes(team_a_files, team_b_files, weaknesses, enemy_weaknesses):
     for hero_path in HEROES_DIR.glob("*.json"):
         hero_file = hero_path.name
 
-        if hero_file in team_a_files:
+        if hero_file in team_a_files or hero_file in team_b_files:
             continue  # already picked
 
         simulated_team = team_a_files + [hero_file]
@@ -257,7 +316,8 @@ def recommend_heroes(team_a_files, team_b_files, weaknesses, enemy_weaknesses):
             "ObjectiveConversion": sim_axes["ObjectiveConversion"],
             "MapReach": sim_axes["MapReach"],
             "MapLock": sim_axes["MapLock"],
-            "FightPersistence": sim_axes["FightPersistence"]
+            "FightPersistence": sim_axes["FightPersistence"],
+            "MidGame": sim_axes["MidGame"]
         }
 
         # B vs A (for exploitation)
@@ -273,7 +333,8 @@ def recommend_heroes(team_a_files, team_b_files, weaknesses, enemy_weaknesses):
             "ObjectiveConversion": sim_axes_b["ObjectiveConversion"],
             "MapReach": sim_axes_b["MapReach"],
             "MapLock": sim_axes_b["MapLock"],
-            "FightPersistence": sim_axes_b["FightPersistence"]
+            "FightPersistence": sim_axes_b["FightPersistence"],
+            "MidGame": sim_axes_b["MidGame"]
         }
 
         # -----------------------------
@@ -313,7 +374,8 @@ team_axes = {
     "objective_conversion":objective_conversion(delta),
     "map_reach":map_reach(delta),
     "map_lock":map_lock(delta),
-    "fight_persistence":fight_persistence(delta)
+    "fight_persistence":fight_persistence(delta),
+    "mid_game": mid_game(delta)
 }
 
 team_b_axes = {
@@ -326,7 +388,8 @@ team_b_axes = {
     "objective_conversion":objective_conversion(delta_b),
     "map_reach":map_reach(delta_b),
     "map_lock":map_lock(delta_b),
-    "fight_persistence":fight_persistence(delta_b)
+    "fight_persistence":fight_persistence(delta_b),
+    "mid_game": mid_game(delta_b)
 }
 
 baseline = {
@@ -338,7 +401,8 @@ baseline = {
     "CounterEngage": team_axes["counter_engage"],
     "Survivability": team_axes["survivability"],
     "ObjectiveConversion":team_axes["objective_conversion"],
-    "FightPersistence": team_axes["fight_persistence"]
+    "FightPersistence": team_axes["fight_persistence"],
+    "MidGame": team_axes["mid_game"]
 }
 
 
@@ -351,7 +415,8 @@ baseline_b = {
     "CounterEngage": team_b_axes["counter_engage"],
     "Survivability": team_b_axes["survivability"],
     "ObjectiveConversion":team_b_axes["objective_conversion"],
-    "FightPersistence": team_axes["fight_persistence"]
+    "FightPersistence": team_b_axes["fight_persistence"],
+    "MidGame": team_b_axes["mid_game"]
 }
 
 
@@ -378,7 +443,7 @@ print("*************")
 for axis, value in sorted(team_b_axes.items()):
     print(f"{axis:9}: {value}")
 
-results = recommend_heroes(team_a, team_b, weaknesses, enemy_weaknesses)
+results = recommend_heroes(team_a_files, team_b_files, weaknesses, enemy_weaknesses)
 
 print("WEAKNESSES DETECTED:")
 print(weaknesses)
