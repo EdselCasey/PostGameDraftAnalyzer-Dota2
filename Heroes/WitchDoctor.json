@@ -1,5 +1,5 @@
 {
     "name": "Witch Doctor",
-    "roles": ["nuker"],
+    "roles": ["nuker","debuffer"],
     "alias": ["wd","witch","doctor"]
 }

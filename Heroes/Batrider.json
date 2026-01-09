@@ -1,5 +1,5 @@
 {
     "name":"Batrider",
-    "roles":["controller","scout","pusher"],
+    "roles":["controller","scout","pusher","debuffer"],
     "alias": ["bat"]
 } 

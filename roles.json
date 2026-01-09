@@ -3,13 +3,13 @@
     "Durability": 2,
     "Engagement": 0,
     "Control": 0,
-    "BurstDamage": 0,
+    "BurstDamage": -1,
     "SingleTarget": 0,
     "VisionControl": 1,
-    "Tempo": 1,
+    "Tempo": 0,
     "VisionAccess": 2,
     "VisionConversion": 1,
-    "SustainedDamage": 0,
+    "SustainedDamage": -1,
     "AreaDamage": 0
   },
   "duelist": {
@@ -35,7 +35,7 @@
     "Tempo": 2,
     "VisionAccess": 1,
     "VisionConversion": 2,
-    "SustainedDamage": 0,
+    "SustainedDamage": -1,
     "AreaDamage": 0
   },
   "zoner": {
@@ -84,11 +84,11 @@
     "BurstDamage": -1,
     "SingleTarget": 0,
     "VisionControl": 1,
-    "Tempo": 1,
+    "Tempo": 2,
     "VisionAccess": 0,
     "VisionConversion": 0,
     "SustainedDamage": 2,
-    "AreaDamage": 2
+    "AreaDamage": 1
   },
   "buffer": {
     "Durability": -1,
@@ -149,7 +149,7 @@
     "BurstDamage": 2,
     "SingleTarget": 1,
     "VisionControl": 2,
-    "Tempo": 1,
+    "Tempo": -1,
     "VisionAccess": -1,
     "VisionConversion": 1,
     "SustainedDamage": 1,
@@ -169,17 +169,17 @@
     "AreaDamage": 0
   },
   "multiunit": {
-    "Durability": 1,
+    "Durability": 0,
     "Engagement": 0,
     "Control": 0,
     "BurstDamage": 0,
     "SingleTarget": 2,
     "VisionControl": 1,
-    "Tempo": 2,
+    "Tempo": 1,
     "VisionAccess": 2,
     "VisionConversion": 1,
     "SustainedDamage": 2,
-    "AreaDamage": 0
+    "AreaDamage": -1
   },
   "battledancer": {
     "Durability": 0,
@@ -201,7 +201,7 @@
     "BurstDamage": 0,
     "SingleTarget": 0,
     "VisionControl": 0,
-    "Tempo": 1,
+    "Tempo": 0,
     "VisionAccess": 0,
     "VisionConversion": 2,
     "SustainedDamage": 0,

@@ -1,5 +1,5 @@
 {
     "name": "Necrophos",
-    "roles": ["battledancer"],
+    "roles": ["battledancer","debuffer","tank"],
     "alias": ["necro"]
 }

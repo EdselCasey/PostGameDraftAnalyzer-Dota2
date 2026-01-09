@@ -91,20 +91,20 @@ def load_team(hero_files):
 
 # list of heroes in the team
 team_a_names_input = [
-    "muer",
-    "husk",
-    "tree",
+    "sky",
     "ember",
+    "bb",
+    "sb",
     "axe"
     
 ]
 
 team_b_names_input = [
    "gyro",
-   "jak",
+   "lock",
    "bh",
-   "underlord",
-   "ss"
+   "beast",
+   "tusk"
 ]
 
 team_a_heroes = resolve_team(team_a_names_input)
@@ -144,10 +144,11 @@ for hero in team_b_heroes:
 def survivability(delta):
     return (
         delta.get("Durability", 0)
-        + delta.get("SustainedDamage", 0)
-        + 0.5 * delta.get("Control", 0)
+        + delta.get("Control", 0)
         - delta.get("AreaDamage", 0)
         - delta.get("BurstDamage", 0)
+        - delta.get("SingleTarget", 0)
+        - delta.get("SustainedDamage", 0)
     )
 
 def mid_game(delta):
@@ -162,9 +163,9 @@ def mid_game(delta):
 def burst_resilience(delta):
     return (
         delta.get("Durability", 0)
-        + delta.get("Control", 0)
+        + 0.5 * delta.get("Control", 0)
         - delta.get("BurstDamage", 0)
-        - 0.5 * delta.get("SingleTarget", 0)
+        - delta.get("SingleTarget", 0)
     )
 
 def late_game(delta):
@@ -183,12 +184,11 @@ def counter_engage(delta):
         + 0.5 * delta.get("Durability", 0)
     )
 
-def map_collapse_risk(delta, burst_resilience):
+def map_collapse_risk(delta):
     return (
         - delta.get("VisionAccess", 0)
-        - 0.75 * delta.get("VisionConversion", 0)
-        - delta.get("Durability", 0)
-        - burst_resilience
+        - 0.5 * delta.get("VisionConversion", 0)
+        - delta.get("Survivability", 0)
         + delta.get("AreaDamage", 0)
         + delta.get("SustainedDamage", 0)
     )
@@ -247,7 +247,7 @@ def compute_team_axes(delta):
         "BurstResilience": burst_resilience(delta),
         "MapReach": map_reach(delta),
         "MapLock": map_lock(delta),
-        "MapCollapseRisk": map_collapse_risk(delta, burst_resilience(delta)),
+        "MapCollapseRisk": map_collapse_risk(delta),
         "ObjectiveConversion": objective_conversion(delta),
         "FightPersistence": fight_persistence(delta),
         "MidGame": mid_game(delta)
@@ -370,7 +370,7 @@ team_axes = {
     "early_game": early_game(delta),
     "survivability": survivability(delta),
     "burst_resilience": burst_resilience(delta),
-    "map_collapse_risk": map_collapse_risk(delta, burst_resilience(delta)),
+    "map_collapse_risk": map_collapse_risk(delta),
     "objective_conversion":objective_conversion(delta),
     "map_reach":map_reach(delta),
     "map_lock":map_lock(delta),
@@ -384,7 +384,7 @@ team_b_axes = {
     "early_game": early_game(delta_b),
     "survivability": survivability(delta_b),
     "burst_resilience": burst_resilience(delta_b),
-    "map_collapse_risk": map_collapse_risk(delta_b, burst_resilience(delta_b)),
+    "map_collapse_risk": map_collapse_risk(delta_b),
     "objective_conversion":objective_conversion(delta_b),
     "map_reach":map_reach(delta_b),
     "map_lock":map_lock(delta_b),

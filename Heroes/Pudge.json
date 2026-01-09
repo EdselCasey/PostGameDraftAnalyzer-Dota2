@@ -1,5 +1,5 @@
 {
     "name": "Pudge",
-    "roles": ["tank","controller"],
+    "roles": ["tank","controller","debuffer"],
     "alias": ["fatty","hook"]
 }

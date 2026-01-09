@@ -1,5 +1,5 @@
 {
     "name": "Winter Wyvern",
-    "roles": ["save","controller","artillery"],
+    "roles": ["save","controller","artillery","debuffer"],
     "alias": ["wyvern","winter","wyv"]
 }
