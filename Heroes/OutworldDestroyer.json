@@ -1,5 +1,5 @@
 {
     "name": "Outworld Destroyer",
-    "roles": ["marksman","nuker","controller"],
+    "roles": ["marksman","nuker","controller","save"],
     "alias": ["od","outworld"]
 }

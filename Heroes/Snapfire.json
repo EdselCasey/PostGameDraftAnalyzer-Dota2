@@ -1,5 +1,5 @@
 {
     "name": "Snapfire",
-    "roles": ["artillery","save","nuker"],
+    "roles": ["artillery","save","nuker","marksman"],
     "alias": ["snap"]
 }

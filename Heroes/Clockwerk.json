@@ -1,0 +1,5 @@
+{
+    "name": "Clockwerk",
+    "roles": ["scout","controller","zoner","diver"],
+    "alias": ["clock"]
+}

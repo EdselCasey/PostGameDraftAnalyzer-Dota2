@@ -6,14 +6,14 @@
     "BurstDamage": -1,
     "SingleTarget": 0,
     "VisionControl": 1,
-    "Tempo": 0,
+    "Tempo": -1,
     "VisionAccess": 2,
     "VisionConversion": 1,
     "SustainedDamage": -1,
     "AreaDamage": 0
   },
   "duelist": {
-    "Durability": 0,
+    "Durability": 1,
     "Engagement": 0,
     "Control": 0,
     "BurstDamage": 0,

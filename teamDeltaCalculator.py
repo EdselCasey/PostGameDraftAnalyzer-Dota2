@@ -91,20 +91,20 @@ def load_team(hero_files):
 
 # list of heroes in the team
 team_a_names_input = [
-    "sky",
-    "ember",
+    "jak",
+    "clinkz",
+    "tusk",
     "bb",
-    "sb",
-    "axe"
+    "es"
     
 ]
 
 team_b_names_input = [
-   "gyro",
-   "lock",
-   "bh",
-   "beast",
-   "tusk"
+   "sd",
+   "tide",
+   "dk",
+   "chen",
+   "qop"
 ]
 
 team_a_heroes = resolve_team(team_a_names_input)
@@ -198,8 +198,8 @@ def early_game(delta):
         delta.get("Engagement", 0)
         + delta.get("Control", 0)
         + delta.get("Tempo", 0)
-        + 0.75 * delta.get("VisionAccess", 0)
-        - 0.5 * delta.get("SustainedDamage", 0)
+        + delta.get("MapReach", 0)
+        + delta.get("MapLock", 0)
     )
 
 def objective_conversion(delta):
@@ -429,35 +429,45 @@ print("\nTEAM A HEROES")
 print("-------------")
 print(", ".join(team_a_names))
 print("")
-print("Team A Axes")
+print("Team A Totals")
 print("*************")
-for axis, value in sorted(team_axes.items()):
+for axis, value in sorted(team_a_totals.items()):
     print(f"{axis:9}: {value}")
+#print("")
+#print("Team A Axes")
+#print("*************")
+#for axis, value in sorted(team_axes.items()):
+#    print(f"{axis:9}: {value}")
 
 print("\nTEAM B HEROES")
 print("-------------")
 print(", ".join(team_b_names))
 print("")
-print("Team B Axes")
+print("Team B Totals")
 print("*************")
-for axis, value in sorted(team_b_axes.items()):
+for axis, value in sorted(team_b_totals.items()):
     print(f"{axis:9}: {value}")
+#print("")
+#print("Team B Axes")
+#print("*************")
+#for axis, value in sorted(team_b_axes.items()):
+#    print(f"{axis:9}: {value}")
+#
+#results = recommend_heroes(team_a_files, team_b_files, weaknesses, enemy_weaknesses)
+#
+#print("WEAKNESSES DETECTED:")
+#print(weaknesses)
+#
+#if weaknesses:#
+#    print("\nMODE: PATCHING TEAM A")#
+#elif enemy_weaknesses:#
+#    print("\nMODE: EXPLOITING TEAM B")#
+#else:#
+#    print("\nMODE: STRUCTURALLY OPTIMAL")
 
-results = recommend_heroes(team_a_files, team_b_files, weaknesses, enemy_weaknesses)
-
-print("WEAKNESSES DETECTED:")
-print(weaknesses)
-
-if weaknesses:
-    print("\nMODE: PATCHING TEAM A")
-elif enemy_weaknesses:
-    print("\nMODE: EXPLOITING TEAM B")
-else:
-    print("\nMODE: STRUCTURALLY OPTIMAL")
 
 
-
-print("\nSTRUCTURAL GAP PATCHER")
-print("----------------------")
-for hero, score in results[:20]:
-    print(f"{hero:20} +{score:.2f}") 
+#print("\nSTRUCTURAL GAP PATCHER")
+#print("----------------------")
+#for hero, score in results[:20]:
+#    print(f"{hero:20} +{score:.2f}") 
