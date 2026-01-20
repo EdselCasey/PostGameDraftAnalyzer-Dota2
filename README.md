@@ -107,3 +107,41 @@ Roles are not mutually exclusive; heroes may contribute to multiple roles with v
 Role influence is evaluated primarily during the early-to-mid game, where draft identity most strongly shapes outcomes.
 
 The system is designed to highlight structural constraints and advantages, not to judge mechanical execution or decision-making.
+
+---
+
+## Attributes
+
+Attributes represent **abstracted team capabilities** derived from hero roles. They do not measure outcomes or player performance; instead, they describe what a draft is structurally capable of doing during the early-to-mid game window. Role contributions are aggregated into these attributes at the hero and team levels.
+
+
+**Durability** – Represents a team’s ability to absorb damage and remain present during extended engagements, including frontline survivability and resistance to burst.
+
+**Engagement** – Measures how effectively a team can start fights on its own terms, including initiation range, speed, and reliability.
+
+**Control** – Reflects the availability and reliability of crowd control tools used to restrict enemy movement, actions, or positioning during fights.
+
+**Burst Damage** – Captures a team’s ability to deal large amounts of damage in short time windows, enabling pickoffs and rapid fight swings.
+
+**Single Target** – Represents focused damage and control applied to individual enemies, particularly effective against priority targets.
+
+**Sustained Damage** – Measures a team’s ability to maintain consistent damage output over extended fights and prolonged skirmishes.
+
+**Area Damage** – Reflects damage applied across multiple targets simultaneously, influencing teamfight effectiveness and zone control.
+
+**Vision Access** – Represents how effectively a team can gain information about enemy positions through scouting, mobility, summons, or abilities.
+
+**Vision Control** – Measures a team’s ability to deny, contest, or dominate vision areas, influencing map safety and engagement selection.
+
+**Vision Conversion** – Represents how effectively a team can turn vision advantages into tangible outcomes such as kills, objectives, or map pressure.
+
+**Tempo** – Captures how quickly a team can apply pressure, force reactions, and dictate the pace of the game relative to the opponent.
+
+
+### Interpretation Notes
+
+- Attributes are **capability indicators**, not win conditions.
+- High values represent strategic strengths, not guaranteed success.
+- Team-level attributes emerge from **role interactions**, not individual heroes in isolation.
+
+---
