@@ -133,7 +133,7 @@ Attributes represent **abstracted team capabilities** derived from hero roles. T
 
 **Zone Control** – Measures a team’s ability to deny, contest, or dominate vision areas, influencing map safety and engagement selection.
 
-**Vision Conversion** – Represents how effectively a team can turn vision advantages into tangible outcomes such as kills, objectives, or map pressure.
+**Map Agency** – Represents how effectively a team can turn vision advantages into tangible outcomes such as kills, objectives, or map pressure.
 
 **Tempo** – Captures how quickly a team can apply pressure, force reactions, and dictate the pace of the game relative to the opponent.
 
