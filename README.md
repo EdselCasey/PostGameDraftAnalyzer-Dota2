@@ -131,7 +131,7 @@ Attributes represent **abstracted team capabilities** derived from hero roles. T
 
 **Vision Access** – Represents how effectively a team can gain information about enemy positions through scouting, mobility, summons, or abilities.
 
-**Vision Control** – Measures a team’s ability to deny, contest, or dominate vision areas, influencing map safety and engagement selection.
+**Zone Control** – Measures a team’s ability to deny, contest, or dominate vision areas, influencing map safety and engagement selection.
 
 **Vision Conversion** – Represents how effectively a team can turn vision advantages into tangible outcomes such as kills, objectives, or map pressure.
 
