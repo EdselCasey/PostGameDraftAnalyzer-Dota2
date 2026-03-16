@@ -1,5 +1,5 @@
 {
     "name": "Bounty Hunter",
-    "roles": ["scout"],
+    "roles": ["scout","shortrangedcontroller"],
     "alias": ["bh","bounty"]
 }

@@ -1,5 +1,5 @@
 {
     "name": "Tusk",
-    "roles": ["diver","controller","save"],
+    "roles": ["diver","shortrangedcontroller","save"],
     "alias": []
 }

@@ -1,5 +1,5 @@
 {
     "name": "Brewmaster",
-    "roles": ["multiunit", "bruiser","tank","debuffer"],
+    "roles": ["multiunit", "bruiser","tank","debuffer","controller"],
     "alias": ["brew"]
 }

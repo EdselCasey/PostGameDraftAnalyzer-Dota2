@@ -1,5 +1,5 @@
 {
     "name": "Treant Protector",
-    "roles": ["bruiser","save","controller","scout"],
+    "roles": ["bruiser","save","controller","scout","zoner"],
     "alias": ["tree"]
 }

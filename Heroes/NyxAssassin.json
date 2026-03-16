@@ -1,5 +1,5 @@
 {
     "name": "Nyx Assassin",
-    "roles": ["scout","controller"],
+    "roles": ["scout","shortrangedcontroller"],
     "alias": ["nyx","nyxnyxnyxnyxnyx"]
 }

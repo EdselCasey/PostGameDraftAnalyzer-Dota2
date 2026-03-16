@@ -1,5 +1,5 @@
 {
     "name": "Doom",
-    "roles": ["bruiser","debuffer"],
+    "roles": ["bruiser","debuffer","shortrangedcontroller"],
     "alias": []
 }

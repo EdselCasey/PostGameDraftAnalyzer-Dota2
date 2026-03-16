@@ -1,5 +1,5 @@
 {
     "name": "Underlord",
     "roles": ["bruiser","zoner","diver","debuffer"],
-    "alias": []
+    "alias": ["ul"]
 }

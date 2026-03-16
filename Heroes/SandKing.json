@@ -1,5 +1,5 @@
 {
     "name": "Sand King",
-    "roles": ["diver","nuker","zoner"],
+    "roles": ["diver","nuker","zoner","shortrangedcontroller"],
     "alias": ["sk","sand"]
 }

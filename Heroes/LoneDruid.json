@@ -1,5 +1,5 @@
 {
     "name": "Lone Druid",
-    "roles": ["multiunit","bruiser","marksman","pusher"],
+    "roles": ["multiunit","bruiser","marksman","pusher","controller"],
     "alias": ["lone","druid","ld"]
 }

@@ -1,5 +1,5 @@
 {
     "name": "Void Spirit",
-    "roles": ["diver"],
+    "roles": ["diver","controller","zoner"],
     "alias": ["void","vs"]
 }

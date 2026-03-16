@@ -1,5 +1,5 @@
 {
     "name": "Faceless Void",
-    "roles": ["controller","duelist","diver"],
+    "roles": ["shortrangedcontroller","duelist","diver"],
     "alias": ["fv","faceless"]
 }

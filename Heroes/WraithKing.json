@@ -1,5 +1,5 @@
 {
     "name": "Wraith King",
-    "roles": ["bruiser","tank","multiunit","pusher"],
+    "roles": ["bruiser","tank","multiunit","pusher","shortrangedcontroller"],
     "alias": ["wk","wraith"]
 }

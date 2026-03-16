@@ -1,5 +1,5 @@
 {
     "name": "Earth Spirit",
-    "roles": ["diver","controller","debuffer"],
+    "roles": ["diver","shortrangedcontroller","debuffer"],
     "alias": ["espirit"]
 }

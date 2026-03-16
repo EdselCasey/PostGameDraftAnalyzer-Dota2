@@ -1,5 +1,5 @@
 {
     "name": "Naga Siren",
-    "roles": ["multiunit","duelist","pusher"],
+    "roles": ["multiunit","duelist","pusher","controller"],
     "alias": ["naga"]
 }

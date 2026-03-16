@@ -1,5 +1,5 @@
 {
     "name": "Centaur Warrunner",
-    "roles": ["tank","controller"],
+    "roles": ["tank","shortrangedcontroller","buffer"],
     "alias": ["cent","centaur"]
 }
